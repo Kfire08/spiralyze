@@ -1868,11 +1868,6 @@ fieldset:disabled .btn {
     --bs-modal-margin: 1.75rem;
     --bs-modal-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
   }
-  .modal-dialog {
-    max-width: var(--bs-modal-width);
-    margin-right: auto;
-    margin-left: auto;
-  }
   .modal-sm {
     --bs-modal-width: 300px;
   }
@@ -3690,7 +3685,23 @@ footer .footer-links li a {
 }
 .modal-dialog {
   max-width: calc(100% - 130px);
-  background-color: #000;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media screen and (max-width: 768px) {
+  .modal-dialog {
+    max-width: calc(100% - 30px);
+  }
+}
+@media screen and (min-width: 1080px) {
+  .modal-content {
+    width: 80%;
+  }
+  .modal-dialog {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 .modal-dialog video {
   height: 100%;
