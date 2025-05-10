@@ -65,6 +65,9 @@ document.addEventListener("DOMContentLoaded", function () {
           if (!e.target.value) {
             e.target.style.border = "1px solid #ffffffb2";
             next(e.target).style.color = "#ffffffb2";
+          } else {
+            e.target.style.border = "1px solid #fff";
+            next(e.target).style.color = "#fff";
           }
         }
       };
