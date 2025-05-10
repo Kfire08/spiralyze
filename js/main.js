@@ -56,8 +56,15 @@ document.addEventListener("DOMContentLoaded", function () {
       input.onblur = function (e) {
         // If value does not exist or is invalid, toggle validation msg
         e.target.classList.add("blur");
-        next(e.target).nextSibling.style.display =
-          !this.value || this.validity.valid === false ? "block" : "none";
+        if (!this.value || this.validity.valid === false) {
+          next(e.target).nextSibling.style.display = "block";
+          e.target.style.border = "1px solid #ff7777";
+          next(e.target).style.color = "#ff7777";
+        } else {
+          next(e.target).nextSibling.style.display = "none";
+          e.target.style.border = "1px solid #ffffffb2";
+          next(e.target).style.color = "#ffffffb2";
+        }
       };
     }
   }
