@@ -62,8 +62,10 @@ document.addEventListener("DOMContentLoaded", function () {
           next(e.target).style.color = "#ff7777";
         } else {
           next(e.target).nextSibling.style.display = "none";
-          e.target.style.border = "1px solid #ffffffb2";
-          next(e.target).style.color = "#ffffffb2";
+          if (!e.target.value) {
+            e.target.style.border = "1px solid #ffffffb2";
+            next(e.target).style.color = "#ffffffb2";
+          }
         }
       };
     }
