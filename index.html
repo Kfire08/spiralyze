@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title></title>
+    <meta name="description" content="Get an intervention" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <nav class="navbar navbar-expand-lg">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+              <img src="img/logo.svg" alt="" />
+            </a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#"
+                    >Home</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">About</a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Contact</a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link">|</a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="#"
+                    >CALL NOW FOR A CONSULT <span> &nbsp;123.456.7890</span></a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+
+      <div class="cover-section">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6">
+              <h1>
+                <span data-string="GET AN">GET AN</span>
+                INTERVENTION
+              </h1>
+              <p>
+                Showing greater respect to older adults can be done in several
+                ways : acknowledging and putting to use the talents and skills
+                of older adults; creating intergenerational initiatives; and
+                allowing older adults to stay active and independent for as long
+                as possible.
+              </p>
+            </div>
+
+            <div class="col-lg-6">
+              <form action="thankyou.html" class="form-container">
+                <fieldset>
+                  <div class="mb-3">
+                    <h3>Contact Us</h3>
+                  </div>
+
+                  <div class="mb-3">
+                    <div class="row">
+                      <div class="col-lg-6">
+                        <div class="form-group has-float-label">
+                          <input
+                            type="text"
+                            placeholder="First Name"
+                            class="form-control"
+                            name="first-name"
+                            pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{1,12}$"
+                            data-validation-msg="First Name must be 2 - 12 characters"
+                            id="first-name"
+                            required
+                          />
+                          <label for="first-name">First Name</label>
+                        </div>
+                      </div>
+                      <div class="col-lg-6">
+                        <div class="form-group has-float-label">
+                          <input
+                            type="text"
+                            placeholder="Last Name"
+                            class="form-control"
+                            name="last-name"
+                            id="last-name"
+                            pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{1,12}$"
+                            data-validation-msg="Last Name must be 2 - 12 characters"
+                            required
+                          />
+                          <label for="last-name">Last Name</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="mb-3">
+                    <div class="row">
+                      <div class="col-lg-6">
+                        <div class="form-group has-float-label">
+                          <input
+                            type="text"
+                            placeholder="Business Email"
+                            class="form-control"
+                            name="business-email"
+                            id="business-email"
+                            pattern="[A-Za-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}"
+                            data-validation-msg="Please Enter valid email"
+                            required
+                          />
+                          <label for="business-email">Business Email</label>
+                        </div>
+                      </div>
+                      <div class="col-lg-6">
+                        <div class="form-group has-float-label">
+                          <input
+                            type="text"
+                            placeholder="Company"
+                            class="form-control"
+                            name="company"
+                            pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{1,12}$"
+                            data-validation-msg="Company Name must be 2 - 12 characters"
+                            id="company"
+                            required
+                          />
+                          <label for="company">Company</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <div class="row">
+                      <div class="col-lg-12 position-relative">
+                        <select name="" id="country-selector" required>
+                          <option value="" disabled selected hidden>
+                            Country
+                          </option>
+                          <option value="India">India</option>
+                          <option value="USA">USA</option>
+                          <option value="Germany">Germany</option>
+                        </select>
+                        <span class="custom-error"
+                          >Please choose one option from Country</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-lg-12">
+                      <button type="submit" class="submit-btn">
+                        <img src="img/send-icon.png" alt="send icon" />&nbsp;
+                        Submit
+                      </button>
+                    </div>
+                  </div>
+                </fieldset>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="understand-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4">
+            <img src="img/image1.png" alt="" />
+          </div>
+          <div class="col-lg-4">
+            <img src="img/image2.png" alt="" />
+          </div>
+          <div class="col-lg-4">
+            <img src="img/image3.png" alt="" />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-12">
+            <h2>
+              <span class="stroked-text" data-string="WE">WE</span> UNDERSTAND
+            </h2>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4 col-md-6">
+            <p>
+              Older adults want to play active and meaningful roles in their
+              lives, including as part of a social network, a neighborhood, and
+              a community. Service providers and policymakers must consider that
+              a lack of sense of purpose can become problematic as people age.
+              Engaging them in leisure activities and volunteer work is
+              important.
+            </p>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <p>
+              Older adults want to stay active and contribute to society in a
+              reciprocal manner (meaning that they want to exchange their
+              services and skills with others for the mutual benefit of the
+              neighborhood or community). Qualitative and quantitative studies
+              published from 2005 to 2016 examining the social needs of older
+              adults were eligible for inclusion.
+            </p>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <p>
+              To stimulate social contacts, neighborhood initiatives can be
+              developed. Social meeting places, such as pubs and churches can
+              help to foster the development of close and peripheral
+              relationships.
+            </p>
+
+            <div class="hidden-xs hidden-sm visible-lg">
+              <button>
+                92% Success Rate &nbsp;<img src="img/arrow-icon.png" alt="" />
+              </button>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 hidden-lg visible-xs">
+            <button>
+              92% Success Rate &nbsp;<img src="img/arrow-icon.png" alt="" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonial">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <!-- Custom Carousel -->
+            <div class="testimonial-slider">
+              <div class="slider-wrapper">
+                <div class="item">
+                  <figure>
+                    <img src="img/testimonial1.png" alt="" />
+                    <figcaption>
+                      <h4>Abbie Harvey</h4>
+                      <p>
+                        I have been caring for my mom & dad off and on for about
+                        10 years now, and I know the importance of me being
+                        there for appointments. Older people need attention,
+                        love and care that they truly deserve.
+                      </p>
+                    </figcaption>
+                  </figure>
+                </div>
+
+                <div class="item">
+                  <figure>
+                    <img src="img/testimonial2.png" alt="" />
+                    <figcaption>
+                      <h4>Abbie Harvey</h4>
+                      <p>
+                        I have been caring for my mom & dad off and on for about
+                        10 years now, and I know the importance of me being
+                        there for appointments. Older people need attention,
+                        love and care that they truly deserve.
+                      </p>
+                    </figcaption>
+                  </figure>
+                </div>
+
+                <div class="item">
+                  <figure>
+                    <img src="img/testimonial3.png" alt="" />
+                    <figcaption>
+                      <h4>Abbie Harvey</h4>
+                      <p>
+                        I have been caring for my mom & dad off and on for about
+                        10 years now, and I know the importance of me being
+                        there for appointments. Older people need attention,
+                        love and care that they truly deserve.
+                      </p>
+                    </figcaption>
+                  </figure>
+                </div>
+              </div>
+            </div>
+
+            <!-- Navigation Buttons -->
+            <button class="nav-btn prev-slide">&#10094;</button>
+            <button class="nav-btn next-slide">&#10095;</button>
+
+            <!-- Dots -->
+            <div class="dots"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="organize-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <h2>
+              <span class="stroked-text" data-string="WE">WE</span> CAN ORGANIZE
+              EVERYTHING
+            </h2>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4">
+            <p class="italic-text">
+              <b>Interventions</b> should focus on older adult's desire for
+              connectedness, participation and independence.
+            </p>
+          </div>
+          <div class="organize-description">
+            <div class="col-lg-4">
+              <p>
+                Loneliness and social isolation are growing public health
+                concerns in our aging society. Whilst these experiences occur
+                across the life span, 50% of individuals aged over 60 are at
+                risk of social isolation and one-third will experience some
+                degree of loneliness later in life. It is vital to reduce
+                loneliness and social isolation among older adults.
+              </p>
+            </div>
+
+            <div class="col-lg-4">
+              <p>
+                The methodology framework proposed by Asked and O'Malley and
+                further developed by Levac, et al. was used to guide the scoping
+                review process. A total of 33 reviews met the inclusion
+                criteria, evaluating a range of interventions targeted at older
+                people residing in the community or institutionalised settings.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <ul class="organize-list">
+              <li>
+                <a
+                  >Needs Assessment <img src="img/info.svg" alt="info-icon"
+                /></a>
+                <span class="tooltiptext"
+                  >We're experienced in our individual crafts and understand how
+                  each one of our roles impacts your plan holistically.</span
+                >
+              </li>
+
+              <li>
+                <a
+                  >Treatment Planning & Placement
+                  <img src="img/info.svg" alt="info-icon"
+                /></a>
+                <span class="tooltiptext"
+                  >We're experienced in our individual crafts and understand how
+                  each one of our roles impacts your plan holistically.</span
+                >
+              </li>
+
+              <li>
+                <a
+                  >Transportation & Logistics
+                  <img src="img/info.svg" alt="info-icon"
+                /></a>
+                <span class="tooltiptext"
+                  >We're experienced in our individual crafts and understand how
+                  each one of our roles impacts your plan holistically.</span
+                >
+              </li>
+
+              <li>
+                <a
+                  >Insurance Advocacy <img src="img/info.svg" alt="info-icon"
+                /></a>
+                <span class="tooltiptext"
+                  >We're experienced in our individual crafts and understand how
+                  each one of our roles impacts your plan holistically.</span
+                >
+              </li>
+
+              <li>
+                <a
+                  >Employment Advocacy <img src="img/info.svg" alt="info-icon"
+                /></a>
+                <span class="tooltiptext"
+                  >We're experienced in our individual crafts and understand how
+                  each one of our roles impacts your plan holistically.</span
+                >
+              </li>
+
+              <li>
+                <a
+                  >Aftercare Planning <img src="img/info.svg" alt="info-icon"
+                /></a>
+                <span class="tooltiptext"
+                  >We're experienced in our individual crafts and understand how
+                  each one of our roles impacts your plan holistically.</span
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="watch-video">
+      <ul>
+        <li>
+          <div class="left-section">
+            <ul>
+              <li>
+                <h3>
+                  <span
+                    class="stroked-text stroke-color-green"
+                    data-string="WATCH"
+                    >WATCH</span
+                  >
+                  THE VIDEO
+                </h3>
+              </li>
+              <li>
+                <h3>
+                  <img src="img/Checkmark-icon.png" alt="" />Needs Assessment
+                </h3>
+
+                <p>
+                  The Advocacy Evaluation Toolkit contains the instruments used
+                  to collect data for evaluating the Consumer Voices for
+                  Coverage program.
+                </p>
+              </li>
+
+              <li>
+                <h3>
+                  <img src="img/Checkmark-icon.png" alt="" />Insurance Advocacy
+                </h3>
+
+                <p>
+                  We are committed to advocating for appropriate coverage and
+                  payment policies.
+                </p>
+              </li>
+
+              <li>
+                <h3>
+                  <img src="img/Checkmark-icon.png" alt="" />Treatment Planning
+                  & Placement
+                </h3>
+
+                <p>
+                  Patients can better understand medical procedures, discharge
+                  instructions, etc.
+                </p>
+              </li>
+            </ul>
+          </div>
+        </li>
+
+        <li>
+          <div class="right-section">
+            <a href="#">
+              <img
+                src="img/play-btn.png"
+                alt=""
+                data-bs-toggle="modal"
+                data-bs-target="#samplevideo"
+              />
+            </a>
+          </div>
+        </li>
+        <a class="navbar-brand" href="#">
+          <img src="img/logo.svg" alt="" />
+        </a>
+      </ul>
+    </section>
+
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <p>@2025 Get an Intervention Inc. All rights reserved.</p>
+          </div>
+
+          <div class="col-lg-6">
+            <ul class="footer-links">
+              <li><a href="#"> Privacy Policy </a></li>
+              <li><a href="#">|</a></li>
+              <li><a href="#"> Terms of use </a></li>
+              <li><a href="#">|</a></li>
+              <li><a href="#"> Site Map </a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Modal -->
+    <div class="modal" id="samplevideo">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="btn-close" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <video controls autoplay id="video1">
+              <source src="img/Auto-video-play.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

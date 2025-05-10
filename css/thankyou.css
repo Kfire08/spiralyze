@@ -1,0 +1,146 @@
+body {
+  font-family: Montserrat, sans-serif;
+  margin: 0;
+}
+.thank-you-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+  background: linear-gradient(180deg, #2a7d6c 0%, rgba(62, 105, 96, 0.62) 100%);
+}
+
+.thank-you-content {
+  max-width: 600px;
+  background: #fff;
+  padding: 3rem;
+  border-radius: 20px;
+  box-shadow: 0 0 30px 10px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.thank-you-icon {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 2rem;
+  animation: scaleIn 0.5s ease-out;
+}
+
+.thank-you-title {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 1rem;
+  font-family: "Fira Mono", Consolas, monospace;
+  font-weight: 700;
+}
+
+.thank-you-message {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 2.5rem;
+  font-family: "Fira Mono", Consolas, monospace;
+}
+
+.back-home-btn {
+  border: 2px solid #5bc8af;
+  border-radius: 4px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 28px;
+  color: #5bc8af;
+  height: 52px;
+  background-color: #fff;
+  max-width: 371px;
+  width: 100%;
+  transition: transform 0.15s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+.back-home-btn:hover {
+  transform: translateY(-3px);
+  color: #5bc8af;
+}
+.back-home-btn img {
+  width: initial;
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 1200px) {
+  .thank-you-content {
+    padding: 2.5rem 2rem;
+    max-width: 90vw;
+  }
+  .thank-you-title {
+    font-size: 2rem;
+  }
+  .thank-you-message {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .thank-you-content {
+    padding: 2rem 1.5rem;
+  }
+  .thank-you-title {
+    font-size: 1.7rem;
+  }
+  .thank-you-message {
+    font-size: 0.95rem;
+  }
+  .thank-you-icon {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+@media (max-width: 600px) {
+  .thank-you-content {
+    border-radius: 12px;
+  }
+  .thank-you-title {
+    font-size: 1.2rem;
+  }
+  .thank-you-message {
+    font-size: 0.9rem;
+  }
+  .thank-you-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 1.2rem;
+  }
+  .back-home-btn {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .thank-you-title {
+    font-size: 1rem;
+  }
+  .thank-you-message {
+    font-size: 0.8rem;
+  }
+  .back-home-btn {
+    height: 40px;
+    font-size: 0.9rem;
+  }
+}
