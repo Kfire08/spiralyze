@@ -600,12 +600,12 @@ fieldset {
     padding: 0;
   }
   .understand-section h2 {
-    font-size: 28px !important;
-    line-height: 38px !important;
+    font-size: 24px !important;
+    line-height: 32px !important;
   }
   .organize-section h2 {
-    font-size: 28px !important;
-    line-height: 38px !important;
+    font-size: 24px !important;
+    line-height: 36px !important;
   }
   .understand-section .row p {
     margin-bottom: 18px !important;
@@ -1444,6 +1444,9 @@ fieldset:disabled .btn {
     width: 100%;
     text-align: right;
   }
+  header {
+    max-height: 100% !important;
+  }
 }
 @media screen and (max-width: 650px) {
   .navbar-collapse {
@@ -1875,6 +1878,11 @@ fieldset:disabled .btn {
 @media (min-width: 992px) {
   .modal-lg {
     --bs-modal-width: 800px;
+  }
+  .cover-section > .container > .row > div:nth-child(1) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 }
 .tooltip {
@@ -2708,7 +2716,7 @@ header .cover-section {
   background: linear-gradient(180deg, #2a7d6c 0, rgba(62, 105, 96, 0.62) 100%);
   box-shadow: 0 10px 50px rgba(0, 0, 0, 0.12);
   border-radius: 12px;
-  padding: 50px 15px 30px 15px;
+  padding: 35px 15px 30px 15px;
   text-align: center;
   max-width: 472px;
   width: 100%;
@@ -2720,9 +2728,10 @@ header .cover-section {
 .form-container h3 {
   font-style: normal;
   font-weight: 700;
-  font-size: 28px;
-  line-height: 34px;
+  font-size: 24px;
+  line-height: 24px;
   color: #fff;
+  margin-bottom: 32px;
 }
 .form-container button {
   background: #5bc8af;
@@ -2911,20 +2920,7 @@ input[type="text"]:invalid {
   box-shadow: none;
   outline: 0;
 }
-@media screen and (max-width: 900px) {
-  footer .row {
-    text-align: center;
-  }
-  footer .footer-links {
-    justify-content: center !important;
-  }
-  .left-section ul li:nth-of-type(1) h3 {
-    text-align: center;
-  }
-  header {
-    height: 100%;
-    max-height: 100%;
-  }
+@media screen and (max-width: 991px) {
   header .cover-section {
     height: 100%;
     padding-bottom: 100px;
@@ -2942,6 +2938,22 @@ input[type="text"]:invalid {
     text-align: center;
     color: rgba(255, 255, 255, 0.8);
     padding: 0 70px;
+  }
+}
+@media screen and (max-width: 992px) {
+  footer .row {
+    text-align: center;
+  }
+  footer .footer-links {
+    margin: 18px 0 !important;
+    justify-content: center !important;
+  }
+  .left-section ul li:nth-of-type(1) h3 {
+    text-align: center;
+  }
+  header {
+    height: 100%;
+    max-height: 100%;
   }
   .navbar-toggler {
     border: none;
@@ -2977,6 +2989,7 @@ input[type="text"]:invalid {
   }
   .form-container {
     margin: 0 auto;
+    padding: 20px 15px 20px 15px;
   }
 }
 @media screen and (min-width: 601px) {
@@ -3382,7 +3395,12 @@ input[type="text"]:invalid {
     margin-top: -100px;
   }
 }
-@media screen and (max-width: 600px) {
+@media (min-width: 629px) and (max-width: 740px) {
+  .watch-video .left-section {
+    background-size: contain !important;
+  }
+}
+@media screen and (max-width: 740px) {
   .watch-video {
     background-position: bottom;
     height: 100%;
@@ -3417,8 +3435,6 @@ input[type="text"]:invalid {
   }
   .left-section ul li h3 {
     font-style: normal;
-    display: grid;
-    grid-template-columns: 8% 92%;
     font-weight: 700;
     font-size: 18px;
     line-height: 24px;
@@ -3470,6 +3486,9 @@ footer .row {
 }
 footer p {
   margin: 0;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
 }
 footer .footer-links {
   padding: 0;
@@ -3479,6 +3498,8 @@ footer .footer-links {
 }
 footer .footer-links li {
   list-style: none;
+}
+footer .footer-links li:not(:last-child) {
   margin-right: 20px;
 }
 footer .footer-links li a {
@@ -3614,7 +3635,7 @@ footer .footer-links li a {
 .nav-btn:hover {
   color: #5bc8af;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1080px) {
   .nav-btn {
     display: none;
   }
@@ -3773,4 +3794,20 @@ footer .footer-links li a {
   font-size: 12px;
   display: none;
   z-index: 1000;
+}
+
+input,
+select {
+  caret-color: #fff;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px transparent inset !important;
+  -webkit-text-fill-color: #fff !important;
+  transition: background-color 5000s ease-in-out 0s;
 }
