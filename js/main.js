@@ -2,6 +2,7 @@
 // Set msg on 'data-validation-msg' input attribute
 // -------------------------------------------------
 document.addEventListener("DOMContentLoaded", function () {
+  // Get all input elements and form/button references
   var inputs = document.getElementsByTagName("input"),
     inputsLen = inputs.length,
     input,
@@ -11,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
     button = document.getElementsByClassName("submit-btn")[0],
     form = document.getElementsByTagName("form")[0];
 
-  // Let's hide the default validation msg
+  // Prevent default browser validation tooltips
   form.addEventListener(
     "invalid",
     function (e) {
@@ -24,6 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
   button.onclick = function () {
     inputsLen = inputs.length;
 
+    // Loop through inputs, show validation message if empty
     while (inputsLen--) {
       if (inputs[inputsLen].value.length > 0) {
         return true;
@@ -31,6 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
       next(inputs[inputsLen]).nextSibling.style.display = "block";
     }
 
+    // Special handling for country selector
     var countrySelector = document.getElementById("country-selector");
     if (countrySelector && countrySelector.value) {
       document.querySelector(".custom-error").style.display = "none";
@@ -40,6 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   };
 
+  // Add custom validation message spans after each input label
   inputsLen = inputs.length; // Reset inputsLen for the next loop
   while (inputsLen--) {
     input = inputs[inputsLen];
@@ -51,16 +55,19 @@ document.addEventListener("DOMContentLoaded", function () {
       inputMsg = document.createElement("span");
       inputMsg.innerHTML = inputValidationMsg;
 
+      // Insert the validation message after the label
       label.parentNode.insertBefore(inputMsg, label.nextSibling);
 
+      // On blur, show/hide validation message and update styles
       input.onblur = function (e) {
-        // If value does not exist or is invalid, toggle validation msg
         e.target.classList.add("blur");
         if (!this.value || this.validity.valid === false) {
+          // Show error
           next(e.target).nextSibling.style.display = "block";
           e.target.style.border = "1px solid #ff7777";
           next(e.target).style.color = "#ff7777";
         } else {
+          // Hide error
           next(e.target).nextSibling.style.display = "none";
           if (!e.target.value) {
             e.target.style.border = "1px solid #ffffffb2";
@@ -74,6 +81,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
+  // Add focus/blur classes to form groups for styling
   var inputElements = document.querySelectorAll("input");
   inputElements.forEach(function (input) {
     input.addEventListener("focus", function () {
@@ -91,7 +99,9 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
+  // -------------------------
   // Custom Modal Implementation
+  // -------------------------
   const sampleVideoModal = document.getElementById("samplevideo");
   const video = document.getElementById("video1");
   const closeModalButton = sampleVideoModal.querySelector(".btn-close");
@@ -99,7 +109,7 @@ document.addEventListener("DOMContentLoaded", function () {
     '[data-bs-target="#samplevideo"]'
   );
 
-  // Open Modal
+  // Open Modal: show modal and play video
   function openModal() {
     sampleVideoModal.style.display = "block";
     sampleVideoModal.classList.add("show");
@@ -109,7 +119,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  // Close Modal
+  // Close Modal: hide modal and pause/reset video
   function closeModal() {
     sampleVideoModal.style.display = "none";
     sampleVideoModal.classList.remove("show");
@@ -142,6 +152,9 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
+  // -------------------------
+  // Custom Tooltip Implementation
+  // -------------------------
   const tooltipTriggers = document.querySelectorAll(
     "[data-bs-toggle='tooltip']"
   );
@@ -152,7 +165,7 @@ document.addEventListener("DOMContentLoaded", function () {
     tooltip.innerText = tooltipText;
     document.body.appendChild(tooltip);
 
-    // Show Tooltip
+    // Show Tooltip on mouseenter
     trigger.addEventListener("mouseenter", function () {
       const rect = trigger.getBoundingClientRect();
       tooltip.style.left = `${
@@ -164,12 +177,15 @@ document.addEventListener("DOMContentLoaded", function () {
       tooltip.style.display = "block";
     });
 
-    // Hide Tooltip
+    // Hide Tooltip on mouseleave
     trigger.addEventListener("mouseleave", function () {
       tooltip.style.display = "none";
     });
   });
 
+  // -------------------------
+  // Testimonial Slider Implementation
+  // -------------------------
   const sliderWrapper = document.querySelector(".slider-wrapper");
   const slides = document.querySelectorAll(".item");
   const prevBtn = document.querySelector(".prev-slide");
@@ -179,7 +195,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let currentIndex = 0;
   const totalSlides = slides.length;
 
-  // Create dots
+  // Create navigation dots for each slide
   slides.forEach((_, index) => {
     const dot = document.createElement("button");
     dot.classList.add("dot");
@@ -190,13 +206,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const dots = document.querySelectorAll(".dot");
 
-  // Go to specific slide
+  // Go to specific slide by index
   function goToSlide(index) {
     currentIndex = index;
     updateSlider();
   }
 
-  // Update slider position and dots
+  // Update slider position and active dot
   function updateSlider() {
     sliderWrapper.style.transform = `translateX(-${currentIndex * 100}%)`;
     dots.forEach((dot, index) => {
@@ -204,22 +220,22 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // Show next slide
+  // Show next slide (circular/infinite)
   function nextSlide() {
     currentIndex = (currentIndex + 1) % totalSlides;
     updateSlider();
   }
 
-  // Show previous slide
+  // Show previous slide (circular/infinite)
   function prevSlide() {
     currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
     updateSlider();
   }
 
-  // Auto-slide
+  // Auto-slide every 3 seconds
   let autoSlideInterval = setInterval(nextSlide, 3000);
 
-  // Pause auto-slide on interaction
+  // Pause auto-slide on user interaction (hover)
   [prevBtn, nextBtn, dotsContainer].forEach((element) => {
     element.addEventListener("mouseenter", () =>
       clearInterval(autoSlideInterval)
@@ -229,11 +245,11 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // Add event listeners
+  // Add event listeners for navigation buttons
   nextBtn.addEventListener("click", nextSlide);
   prevBtn.addEventListener("click", prevSlide);
 
-  // Touch support
+  // Touch support for slider (swipe left/right)
   let startX = 0;
   sliderWrapper.addEventListener("touchstart", (e) => {
     startX = e.touches[0].clientX;
@@ -245,6 +261,9 @@ document.addEventListener("DOMContentLoaded", function () {
     if (startX < endX - 50) prevSlide();
   });
 
+  // -------------------------
+  // Navbar Toggler for Mobile
+  // -------------------------
   const navbarToggler = document.querySelector(".navbar-toggler");
   const navbarCollapse = document.querySelector(".navbar-collapse");
 
@@ -253,6 +272,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+// Helper function to get the next element sibling (skipping text nodes)
 function next(elem) {
   do {
     elem = elem.nextSibling;

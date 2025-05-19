@@ -1,27 +1,35 @@
 <!DOCTYPE html>
 <html class="no-js" lang="">
   <head>
+    <!-- Meta tags for character set, compatibility, and responsiveness -->
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <title>Get An Intervention</title>
     <meta name="description" content="Get an intervention" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Google Fonts: Montserrat for consistent typography -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
+
+    <!-- Main CSS file for custom styles -->
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
+    <!-- Header section with navigation -->
     <header>
       <div class="container">
         <nav class="navbar navbar-expand-lg">
           <div class="container-fluid">
+            <!-- Logo -->
             <a class="navbar-brand" href="#">
               <img src="img/logo.svg" alt="" />
             </a>
+            <!-- Mobile navbar toggler -->
             <button
               class="navbar-toggler"
               type="button"
@@ -33,6 +41,7 @@
             >
               <span class="navbar-toggler-icon"></span>
             </button>
+            <!-- Navigation links -->
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                 <li class="nav-item">
@@ -63,9 +72,11 @@
         </nav>
       </div>
 
+      <!-- Hero/cover section -->
       <div class="cover-section">
         <div class="container">
           <div class="row">
+            <!-- Left column: headline and description -->
             <div class="col-lg-6">
               <h1>
                 <span data-string="GET AN">GET AN</span>
@@ -79,7 +90,7 @@
                 as possible.
               </p>
             </div>
-
+            <!-- Right column: form or image -->
             <div class="col-lg-6">
               <form action="thankyou.html" class="form-container">
                 <fieldset>
@@ -132,7 +143,7 @@
                             class="form-control"
                             name="business-email"
                             id="business-email"
-                            pattern="[A-Za-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}"
+                            pattern="[A-Za-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}"
                             data-validation-msg="Please Enter valid email"
                             required
                           />
@@ -544,6 +555,7 @@
       </div>
     </div>
 
+    <!-- Main JS file for interactivity -->
     <script src="js/main.js"></script>
   </body>
 </html>
